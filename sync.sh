@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 cd /var/www/bots/moneyTracker
-git pull && ./git-auto -o -p && git push
+/usr/bin/git -C /var/www/bots/moneyTracker/ pull && ./git-auto -o -p && /usr/bin/git -C /var/www/bots/moneytracker push
