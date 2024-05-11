@@ -1,5 +1,6 @@
 import os
 import hashlib
+import json
 
 def find_duplicate_files(path):
     """
@@ -56,11 +57,21 @@ count, count2 = count_files_with_prefix(path, prefix)
 print(f"файлы требующие переименования '{prefix}': {count}")
 print(f"файлы не требующие переименования '{prefix}': {count2}")
 duplicates = find_duplicate_files(path)
-
+count3 = 0 
 # Печать списка дубликатов файлов
 for file, path in duplicates:
     print(f"Дубликат: {file} ({path})")
+    count3 += 1
 
+stat = {"all_count": count+count2, 
+        "recognize": count2, 
+        "not_recognize": count, 
+        "rec_quality" : (count2 / (count+count2)) *100,
+        "not_rec_quality" : (count / (count+count2)) *100,
+        "double" : count3, 
+}
+with open("stat.json", "w") as outfile:
+    json.dump(stat, outfile)
 
 '''
 import os
