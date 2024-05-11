@@ -1,5 +1,5 @@
 const test = "test"
-var url = "https://raw.githubusercontent.com/goshva/moneyTracker/main/stat.json"
+var url = "https://raw.githubusercontent.com/goshva/moneyTracker/main/docs/stat.json"
 var statistic = document.getElementById('statistic')
 async function logMovies() {
     const response = await fetch(url);
