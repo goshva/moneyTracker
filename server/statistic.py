@@ -70,7 +70,8 @@ stat = {"all_count": count+count2,
         "not_rec_quality" : (count / (count+count2)) *100,
         "double" : count3, 
 }
-with open("stat.json", "w") as outfile:
+output_path = "docs/stat.json"
+with open(output_path, "w") as outfile:
     json.dump(stat, outfile)
 
 '''
