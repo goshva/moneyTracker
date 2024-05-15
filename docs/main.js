@@ -1,11 +1,16 @@
 const test = "test"
 var url = "https://raw.githubusercontent.com/goshva/moneyTracker/main/docs/stat.json"
-var statistic = document.getElementById('statistic')
+var all_count = document.getElementById('all_count')
+var double = document.getElementById('double')
+var tracker = document.getElementById('tracker')
 async function logMovies() {
     const response = await fetch(url);
     const movies = await response.json();
-    console.log(`Fifteen is ${movies.all_count} and not ${url}.`);
-    console.log(movies.all_count);
-    statistic.innerText=`Всего фотографий в нашем боте: ${movies.all_count}, дубликатов фотографий: ${movies.double}.`
+    all_count.innerText=`Общее количество фото: ${movies.all_count}`;
+    double.innerText=`Количество дубликатов: ${movies.double}`;
+    tracker.innerText=`Отслеживаемые траектории перемещения: ${movies.tracker}`;
+
+
+
   }
 logMovies()
