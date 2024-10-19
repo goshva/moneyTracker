@@ -5,6 +5,7 @@ Welcome to the Banknote Image Database! This is a collection of banknote images 
 ## Usage
 Update statistic:
 ```python server/statistic.py``` --> docs/stat.json
+
 ### Add a Photo
 To add a photo of a banknote, simply upload the image file with the serial number as the file name. Make sure the image is clear and well-lit to ensure accurate recognition.
 
