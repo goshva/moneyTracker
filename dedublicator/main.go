@@ -4,7 +4,6 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
-	"image"
 	"image/jpeg"
 	"log"
 	"os"
